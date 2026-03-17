@@ -1,6 +1,6 @@
 # Aplicativo-ACs-Brasil
  
-Aplicativo de monitoramento das anomalias congênitas no Brasil, com dados de 2010 a 2014.
+Aplicativo análise das anomalias por município e estados de residência da mãe de todo Brasil, com dados do SINASC de 2010 a 2014.
 
 Data de atualização: 28/10/2025
 
