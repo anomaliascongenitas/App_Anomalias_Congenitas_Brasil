@@ -1,7 +1,7 @@
 # Aplicativo-ACs-Brasil
  
-Aplicativo análise das anomalias por município e estado de residência da mãe de todo Brasil, com dados do SINASC de 2010 a 2014.
+Aplicativo análise das anomalias por município e estado de residência da mãe de todo Brasil, com dados do SINASC de 2010 a 2015.
 
-Data de atualização: 28/10/2025
+Data da última atualização dos dados: 30/04/2026
 
 Link: https://projetoanomaliascongenitas.shinyapps.io/ac_br/
