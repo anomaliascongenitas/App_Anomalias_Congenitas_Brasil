@@ -137,15 +137,6 @@ aba_mapa_municipios = tabItem(
         collapsible = TRUE
       )
     ), 
-    # fluidRow(
-    #   box(
-    #     title = "Gráfico de Área do Número de nascidos vivos com anomalia congênita por grupo de CID considerando os grupos de CIDs e macrorregiões de saúde selecionados",
-    #     background = "blue",
-    #     plotlyOutput("plot_area_chart_cid"),
-    #     width = 12,
-    #     collapsible = TRUE
-    #   )
-    # ), 
     
 
     fluidRow(

@@ -25,7 +25,7 @@ aba_mapa_uf = tabItem(
     ),
     br(),
     fluidRow(
-      tags$div("Aplicativo atualizado em 28 de outubro de 2025", 
+      tags$div("Aplicativo atualizado em 30 de abril de 2026", 
                style =  "color: #b30000; font-weight: bold; font-size: 18px; margin-left: 15px;")
     ),
     titlePanel(
@@ -183,29 +183,28 @@ aba_mapa_uf = tabItem(
     #     collapsible = TRUE
     #   )
     # ), 
-    fluidRow(column(
-      h2(
-        "Tabela de prevalência ao nascimento agrupada por cada grupo de CID de saúde selecionadas"
-      ),
-      width = 12,
-      dataTableOutput("tabela_uf_1", height = 500),
-      br(),
-      downloadButton("downloadData_uf_1", "Download Tabela de dados"),
-    )), 
+    fluidRow(
+      column(
+        width = 12,
+        h2("Tabela de prevalência ao nascimento agrupada por cada grupo de CID de saúde selecionadas"),
+        dataTableOutput("tabela_uf_1"),
+        br(),
+        downloadButton("downloadData_uf_1", "Download Tabela de dados")
+      )
+    ),
     
-    br(),
-    br(), 
+    hr(),
     
-    fluidRow(column(
-      h2(
-        "Tabela de prevalência ao nascimento com apenas os grupos de CID's e anos selecionados"
-      ),
-      width = 12,
-      dataTableOutput("tabela_uf_2", height = 500),
-      br(),
-      downloadButton("downloadData_uf_2", "Download Tabela de dados"),
-      HTML("<br><br><br>")
-    ))
+    fluidRow(
+      column(
+        width = 12,
+        h2("Tabela de prevalência ao nascimento com apenas os grupos de CID's e anos selecionados"),
+        dataTableOutput("tabela_uf_2"),
+        br(),
+        downloadButton("downloadData_uf_2", "Download Tabela de dados"),
+        br(), br(), br()
+      )
+    )
     
   )
 )

@@ -34,7 +34,7 @@ aba_sobre <- tabItem(
                                                                                     mostrar a distribuição das Anomalias Congênitas por município de  residência da mãe do Estado. "
         )),
         h4(
-          "Fonte de dados: Sistema de Informação sobre Nascidos Vivos (SINASC), última atualização: 28/10/2025"
+          "Fonte de dados: Sistema de Informação sobre Nascidos Vivos (SINASC), última atualização: 30/04/2026"
         ),
         type = 2,
         collapsible = TRUE,
@@ -129,6 +129,22 @@ aba_sobre <- tabItem(
         #height = 180,
         status = "primary",
         "Contato: thaynewk@gmail.com",
+        footer_padding = F,
+        closable =  FALSE
+      )
+    ),
+    fluidRow(
+      userBox(
+        title = userDescription(
+          title = "Júlia Cauduro Backes Gehlen",
+          subtitle = "Graduanda em Estatística na UFRGS",
+          image = 'julia.jpg',
+          type = 2
+        ),
+        width = 4,
+        #height = 180,
+        status = "primary",
+        "Contato: julia.cauduro.bg@gmail.com",
         footer_padding = F,
         closable =  FALSE
       )
