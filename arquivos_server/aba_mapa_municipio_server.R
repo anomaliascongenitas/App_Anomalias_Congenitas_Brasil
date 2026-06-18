@@ -104,7 +104,7 @@ output$box_numero_casos_munic <- renderValueBox({
 output$box_prevalencia_munic <- renderValueBox({
   valueBox(
     round(sum(banco_munic_cid_ano()$n_anomalias)/sum(banco_munic_cid_ano()$n_nascimentos)*10^4,3),
-    "Prevalência ao nascimento no Brasil por 10000",
+    "Prevalência ao nascimento no(s) estado(s) selecionado(s) por 10000",
     icon = icon("notes-medical"),
     color = "purple"
   )
@@ -328,9 +328,7 @@ output$plot_quadradinhos_munic <- renderPlotly({
     
     
     quadradinho=ggplot(banco,aes(x=ANONASC, y=reorder(NOMEMUN, variavel, FUN = sum), fill=variavel))+
-      geom_raster(aes(text=sprintf("Ano nascimento: %s<br>Nome Município: %s  <br>Número de nascidos vivos: %s
-                                   Nº de nascidos vivos com anomalia: %s 
-                                     Prevalência ao nascimento: %s",
+      geom_raster(aes(text=sprintf("Ano nascimento: %s<br>Nome Município: %s  <br>Número de nascidos vivos: %s<br> Nº de nascidos vivos com anomalia: %s <br> Prevalência ao nascimento: %s",
                                    ANONASC, NOMEMUN,n_nascimentos,n_anomalias,round(prevalencia,2)))) +
       scale_fill_viridis_c(option = "A",  name= "",alpha = 1)+
       labs(x="",y="",title = variavel_opcoes[as.numeric(input$mapa_munic_variavel)]) +
@@ -402,7 +400,7 @@ output$tabela_munic_1 <- renderDataTable({
         paging = FALSE
       )
     )%>%
-    formatCurrency(2:16,' ', digits = 3, interval = 3, mark = "", dec.mark = ",")
+    formatCurrency(2:17,' ', digits = 3, interval = 3, mark = "", dec.mark = ",")
 })
 
 

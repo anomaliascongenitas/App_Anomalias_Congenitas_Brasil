@@ -99,7 +99,7 @@ output$aba_serie_munic <- renderPlotly({
       )+
       #ylim(0,max(banco$variavel)*1.1)+
       labs(x = "", y = variavel_opcoes[which(variavel_opcoes2 == input$serie_munic_variavel)],color = "Municípios")+
-      scale_x_continuous(breaks=2010:2024,labels=2010:2024),
+      scale_x_continuous(breaks=2010:2025,labels=2010:2025),
     tooltip="text")
 })
 

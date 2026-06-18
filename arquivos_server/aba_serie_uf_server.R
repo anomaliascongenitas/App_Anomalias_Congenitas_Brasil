@@ -55,6 +55,6 @@ output$aba_serie_ufs <- renderPlotly({
       )+
       ylim(0,max(banco$variavel)*1.1)+
       labs(x = "", y = variavel_opcoes[which(variavel_opcoes2 == input$serie_uf_variavel)],color = "UFs")+
-      scale_x_continuous(breaks=2010:2024,labels=2010:2024),
+      scale_x_continuous(breaks=2010:2025,labels=2010:2025),
     tooltip="text")
 })

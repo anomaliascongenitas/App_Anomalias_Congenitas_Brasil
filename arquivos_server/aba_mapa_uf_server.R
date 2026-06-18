@@ -223,9 +223,7 @@ output$plot_quadradinhos_uf <- renderPlotly({
     
     
     quadradinho=ggplot(banco,aes(x=ANONASC, y=reorder(UF, variavel, FUN = sum), fill=variavel))+
-      geom_raster(aes(text=sprintf("Ano nascimento: %s<br>UF: %s  <br>Número de nascidos vivos: %s
-                                   Nº de nascidos vivos com anomalia: %s 
-                                     Prevalência ao nascimento: %s",
+      geom_raster(aes(text=sprintf("Ano nascimento: %s<br>UF: %s  <br>Número de nascidos vivos: %s <br>Nº de nascidos vivos com anomalia: %s <br>Prevalência ao nascimento: %s",
                                    ANONASC, UF,n_nascimentos,n_anomalias,round(prevalencia,2)))) +
       scale_fill_viridis_c(option = "A",  name= "",alpha = 1)+
       labs(x="",y="",title = variavel_opcoes[as.numeric(input$mapa_uf_variavel)]) +
@@ -264,15 +262,14 @@ output$tabela_uf_1 <- renderDataTable({
       options = list(
         info = FALSE,
         scrollX = FALSE,
+        scrollY = "500px",
         searching = FALSE,
         rowCallback = JS(rowCallback),
         paging = FALSE
       )
     )%>%
-    formatCurrency(2:16,' ', digits = 3, interval = 3, mark = "", dec.mark = ",")
+    formatCurrency(2:17,' ', digits = 3, interval = 3, mark = "", dec.mark = ",")
 })
-
-
 
 
 
@@ -294,6 +291,7 @@ output$tabela_uf_2 <- renderDataTable({
       options = list(
         info = TRUE,
         scrollX = TRUE,
+        scrollY = "400px",
         searching = TRUE,
         rowCallback = JS(rowCallback),
         paging = TRUE
