@@ -9,25 +9,14 @@ library(tidyverse)
 library(hrbrthemes)
 library(plotly)
 library(sf)
-
 library(ps)
 library(spdep) 
 library(kableExtra)
-
 library(viridis)
 library(ggbeeswarm)
 library(rmapshaper)
 library(shinyjs)
 
-rsconnect::setAccountInfo(name='projetoanomaliascongenitas',
-                          token='C7185BDB3481C13E6514102F6297982D',
-                          secret='g1t0P/LKYpJ6cWWZKj20tMtln0HYmVZ2t+nQnejZ')
-library(rsconnect)
-
-
-rsconnect::deployApp(appDir = 'C:/Users/Admin/Documents/Aplicativo-ACs-Brasil-main',
-                     appName = 'ac_br',
-                     account = 'projetoanomaliascongenitas')
 options(scipen=99)
 options(OutDec= ",") 
 
@@ -74,10 +63,6 @@ banco_nascimentos = banco_nascimentos %>%
   left_join(siglas_ufs, by = c("UF" = "CODUF"))
 
 
-
-
-
-
 anos <- unique(banco_nascimentos$ANONASC)
 limites_contagem <- round(100*1.2,0)
 limites_prevalencia <- 100*1.2
@@ -120,10 +105,6 @@ mapa_municipios2 = mapa_municipios %>%
 
 old = 0
 contador = 0
-
-
-
-
 
 
 nomes_munic = with(mapa_municipios2,str_c(codigo_ibge," ",SIGLAUF," - ",NM_MUNICIP))
